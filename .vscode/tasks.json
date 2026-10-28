@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Mobile Shop POS",
+			"type": "shell",
+			"command": "cd olgax-pos && pnpm exec next dev --hostname 0.0.0.0",
+			"isBackground": true,
+			"problemMatcher": {
+				"owner": "nextjs",
+				"pattern": {
+					"regexp": "^(?!)$",
+					"file": 1,
+					"message": 1
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": "^▲ Next\\.js",
+					"endsPattern": "^✓ Ready in"
+				}
+			},
+			"group": "build"
+		}
+	]
+}

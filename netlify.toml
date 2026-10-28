@@ -1,0 +1,7 @@
+[build]
+base = "olgax-pos"
+command = "pnpm exec prisma migrate deploy && pnpm build"
+publish = ".next"
+
+[build.environment]
+NODE_VERSION = "22"
